@@ -1,0 +1,256 @@
+*{
+   font: inherit;
+   font-weight: inherit;
+   line-height: inherit;
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+   color: inherit;
+   border: none;
+   outline: none;
+   -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+           box-shadow: none;
+}
+*,
+*::before,
+*::after{
+   box-sizing: inherit;
+}
+html{
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+   font-size: 16px;
+   font-weight: 300;
+   line-height: 1.54;
+   box-sizing: border-box;
+   color: #333;
+   background: #f0f0e0;
+}
+body{
+   display: flex;
+   width: 100%;
+   min-height: 100vh;
+   flex-flow: column wrap;
+   justify-content: space-between;
+}
+ul,
+ol{
+   list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+   font-size: 32px;
+   /*color: #005a9c;*/
+   color: #f73d34;
+   /*rgba(0,91,156,.9)*/
+}
+.m li{
+   position: relative;
+   padding: 0 0 0 16px;
+}
+.m li:before{
+   font-size: 20px;
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: block;
+   content: "\2022";
+   color: #f73d34;
+}
+.r-1{
+   order: 1;
+}
+.r-2{
+   order: 2;
+}
+.r-3{
+   order: 3;
+}
+.r-7{
+   order: 7;
+}
+.r-9{
+   order: 9;
+}
+[class^=r] a{
+   display: inline-block;
+   min-width: 44px;
+   padding: 15px;
+   text-align: center;
+}
+[class^=r] a u{
+   display: inline-block;
+   border-bottom: 1px dotted rgba(156,156,156,.9);
+}
+.m{
+   font-size: 18px;
+   max-width: 100%;
+   padding: 15px;
+   order: 5;
+}
+.m a:not[class]{
+   color: #005a9c;
+}
+a:hover{
+   /*color: #0070c9;*/
+   color: #f73d34;
+}
+.m h1,
+.m h1,
+.m h2,
+.m h3,
+.m h4,
+.m h5,
+.m h6,
+.m dl,
+.m ul,
+.m ol,
+.m p{
+   width: 760px;
+   max-width: 100%;
+   margin: 15px auto;
+}
+.hr{
+   display: block;
+   width: 100%;
+   border-top: 1px solid #ccc;
+}
+dl.m{
+   display: flex;
+   max-width: 100%;
+   padding: 0;
+   flex-flow: row wrap;
+   justify-content: space-evenly;
+   align-content: center;
+   align-items: center;
+}
+.m dt,
+.m dd{
+   max-width: 100%;
+   padding: 15px;
+}
+.m dd{
+   text-align: center;
+   align-self: flex-start;
+}
+/*
+dl.m dd *{
+   color: #333;
+   border-color: #999;
+}
+*/
+.m dd b{
+   font-size: 24px;
+   font-weight: bolder;
+   display: block;
+}
+/* строка */
+[class^=r]{
+   display: flex;
+   max-width: 100%;
+   align-items: stretch;
+   align-content: stretch;
+   justify-content: space-between;
+   flex-flow: row wrap;
+}
+/* столбец */
+.с{
+   display: flex;
+   align-items: stretch;
+   align-content: stretch;
+   justify-content: space-between;
+   flex-flow: column wrap;
+}
+.dark  [class^=r]{
+   line-height: 1;
+   color: #fff;
+   background: #3f3f30;
+}
+.dark [class^=r] a:hover{
+   background: #2f2f27;
+}
+a i:empty{
+   display: inline-block;
+   width: .7em;
+   height: .7em;
+   margin: -1em 0 0 .3em;
+   -webkit-transition: -webkit-transform .3s;
+           transition:         transform .3s;
+   -webkit-transform: scale(.75) rotate(45deg);
+           transform: scale(.75) rotate(45deg);
+   border-right: 2px solid;
+   border-bottom: 2px solid;
+}
+/* скрыть / показать м.окно */
+[id^="mx-"]:not(:target){
+   display: none;
+}
+[id^="mx-"]:target{
+   display: block;
+   min-height: 90vh;
+}
+.hit:after{
+   font-size: 12px;
+   display: inline-block;
+   float: right;
+   padding: 15px;
+   content: "Хит продаж!";
+   content: "№1 в мире";
+   transform: rotate(-5deg);
+   /*opacity: .8;*/
+}
+.m .go{
+   display: table;
+   min-width: 160px;
+   max-width: 80%;
+   margin: 15px auto;
+   padding: 8px 15px;
+   color: #f73d34;
+   border: 1px solid rgba(247, 61, 52, .7);
+}
+.price{
+   color: #f73d34;
+}
+.price:after{
+   content: " ₽";
+}
+.ss{
+   font-size: 12px;
+}
+.ac{
+   text-align: center;
+}
+a.viz{
+   display: block;
+   transform: rotate(-5deg);
+   background: #389e89;
+   color: #fff;
+   padding: 15px 25px;
+   margin-bottom: 45px;
+}
+.m dd .go{
+   margin-top: 45px;
+   transform: skewX(-30deg);
+   border-radius: 6px;
+}
+.m dd .go b{
+   transform: skewX(30deg);
+   font-size: 16px;
+   font-weight: 300;
+}
+.m dd .viz:hover{
+   transform: rotate(0);
+   transition-delay: 0.3s;
+   transition: all 0.6s ease;
+}
+@media only screen and (max-width: 482px){
+   .r-1{
+       order: 6;
+       border-top: 1px solid #ccc;
+       border-bottom: 1px solid #ccc;
+   }
+}
